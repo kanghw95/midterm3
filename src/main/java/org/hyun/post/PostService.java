@@ -22,7 +22,7 @@ public class PostService {
 		Post post = new Post();
 		post.setUserId("1");
 		post.setName("강현우");
-		post.setContent("죄송합니다!");
+		post.setContent("중간고사 ..ㅎ");
 
 		postDao.addPost(post);
 		logger.debug("글을 등록");
@@ -40,11 +40,11 @@ public class PostService {
 	 * (3) 좋아요
 	 */
 	public void likePost() {
-		final String postId = "55";
-		// 55번 글에 좋아요를 한다.
+		final String postId = "56";
+		// 56번 글에 좋아요를 한다.
 		postDao.likePost(postId);
 
-		
+		// 56번 글을 가져와서 post 확인
 		Post post = postDao.getPost(postId);
 		logger.debug(post);
 	}

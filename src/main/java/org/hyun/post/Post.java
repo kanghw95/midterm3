@@ -1,18 +1,24 @@
 package org.hyun.post;
 
-public class Post {
 
-	String posId;
+/**
+ * Article 도메인 오브젝트.<br>
+ * 데이터베이스의 article 테이블에 매핑한다.
+ * 
+ * @author kjs
+ */
+public class Post {
+	String postId;
 	String userId;
 	String name;
 	String content;
-	int sweet;
+	String sweet;
 	String cdate;
-	public String getPosId() {
-		return posId;
+	public String getPostId() {
+		return postId;
 	}
-	public void setPosId(String posId) {
-		this.posId = posId;
+	public void setPostId(String postId) {
+		this.postId = postId;
 	}
 	public String getUserId() {
 		return userId;
@@ -32,10 +38,10 @@ public class Post {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public int getSweet() {
+	public String getSweet() {
 		return sweet;
 	}
-	public void setSweet(int sweet) {
+	public void setSweet(String sweet) {
 		this.sweet = sweet;
 	}
 	public String getCdate() {
@@ -46,8 +52,7 @@ public class Post {
 	}
 	@Override
 	public String toString() {
-		return "Post [posId=" + posId + ", userId=" + userId + ", name=" + name + ", content=" + content + ", sweet="
-				+ sweet + ", cdate=" + cdate + "]";
+		return "Post [postId=" + postId + ", userId=" + userId + ", name=" + name + ", content=" + content + ", sweet="
+				+ sweet + ", cdate=" + cdate + "]\n";
 	}
-	
 }
